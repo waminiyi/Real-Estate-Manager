@@ -1,4 +1,4 @@
-package com.waminiyi.utility;
+package com.waminiyi.utility.utils;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
