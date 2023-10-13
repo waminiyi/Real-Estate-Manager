@@ -1,5 +1,9 @@
 package com.waminiyi.utility
 
+import com.waminiyi.utility.utils.formatAsEuro
+import com.waminiyi.utility.utils.formatAsUSDollar
+import com.waminiyi.utility.utils.toEuro
+import com.waminiyi.utility.utils.toUSDollar
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -30,7 +34,7 @@ class MoneyUtilTest {
     @Test
     fun testFormatAsUSDollar() {
         val amount = 100
-        val usdFormatted = removeNonBreakingSpace(formatAsUSDollar(amount))
+        val usdFormatted = removeNonBreakingSpace(amount.formatAsUSDollar())
         val expectedResult = "$100.00"
 
         assertEquals(expectedResult, usdFormatted)
@@ -39,7 +43,7 @@ class MoneyUtilTest {
     @Test
     fun testFormatAsEuro() {
         val amount = 100
-        val euroFormatted = removeNonBreakingSpace(formatAsEuro(amount))
+        val euroFormatted = removeNonBreakingSpace(amount.formatAsEuro())
         val expectedResult = "100,00 €"
 
         assertEquals(expectedResult, euroFormatted)
