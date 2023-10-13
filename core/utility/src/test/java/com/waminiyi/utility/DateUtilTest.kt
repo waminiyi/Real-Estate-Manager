@@ -1,18 +1,16 @@
 package com.waminiyi.utility
 
-import org.junit.Test
-
+import com.waminiyi.utility.utils.currentDate
 import org.junit.Assert.assertEquals
+import org.junit.Test
 import java.time.LocalDate
 
 class DateUtilTest {
     @Test
     fun testGetCurrentDate() {
-        val currentDate = LocalDate.now()
-        val expectedDate = "${currentDate.dayOfMonth}/${currentDate.monthValue}/${currentDate.year}"
+        val todayDate = LocalDate.now()
+        val expectedDate = "${todayDate.dayOfMonth}/${todayDate.monthValue}/${todayDate.year}"
 
-        val actualDate = getCurrentDate()
-
-        assertEquals(expectedDate, actualDate)
+        assertEquals(expectedDate, currentDate)
     }
 }

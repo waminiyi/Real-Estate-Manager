@@ -1,7 +1,7 @@
-package com.waminiyi.utility
+package com.waminiyi.utility.utils
 
-import com.waminiyi.utility.CurrencyCode.EUR
-import com.waminiyi.utility.CurrencyCode.USD
+import com.waminiyi.utility.utils.CurrencyCode.EUR
+import com.waminiyi.utility.utils.CurrencyCode.USD
 import java.text.NumberFormat
 import java.util.*
 import kotlin.math.round
@@ -18,19 +18,15 @@ fun Int.toUSDollar(): Int = round(this * EUR.rateToDollar).toInt()
 
 /**
  * @return A formatted currency string representing the US Dollar
- * @param amount The amount to format
+ *
  */
-fun formatAsUSDollar(amount: Int): String {
-    return amount.formatCurrency(USD)
-}
+fun Int.formatAsUSDollar() = formatCurrency(USD)
 
 /**
  * @return A formatted currency string representing the Euro
- * @param amount The amount to format
+ *
  */
-fun formatAsEuro(amount: Int): String {
-    return amount.formatCurrency(EUR)
-}
+fun Int.formatAsEuro() = formatCurrency(EUR)
 
 /**
  * @return A formatted currency string representing the given numeric value and currency code.
